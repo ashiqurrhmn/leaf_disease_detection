@@ -1,0 +1,77 @@
+[
+  {
+    "name": "Background_without_leaves",
+    "cause": "No plant detected",
+    "cure": "Upload a clear leaf image"
+  },
+  {
+    "name": "Potato___Early_blight",
+    "cause": "Fungus Alternaria solani",
+    "cure": "Use fungicide and crop rotation"
+  },
+  {
+    "name": "Potato___Late_blight",
+    "cause": "Phytophthora infestans",
+    "cure": "Use resistant varieties and fungicide"
+  },
+  {
+    "name": "Potato___healthy",
+    "cause": "No disease",
+    "cure": "Maintain proper care"
+  },
+  {
+    "name": "Rose___Aphid",
+    "cause": "Aphid insect attack",
+    "cure": "Use neem oil or insecticide"
+  },
+  {
+    "name": "Rose___Black_Spot",
+    "cause": "Fungal disease",
+    "cure": "Remove infected leaves and apply fungicide"
+  },
+  {
+    "name": "Rose___Hole",
+    "cause": "Insect damage",
+    "cure": "Use pesticide and remove damaged leaves"
+  },
+  {
+    "name": "Rose___Powdery",
+    "cause": "Powdery mildew fungus",
+    "cure": "Apply fungicide and improve airflow"
+  },
+  {
+    "name": "Rose___Yellow",
+    "cause": "Nutrient deficiency or overwatering",
+    "cure": "Adjust watering and add fertilizer"
+  },
+  {
+    "name": "Rose___healthy",
+    "cause": "No disease",
+    "cure": "Maintain good care"
+  },
+  {
+    "name": "Tomato___Leaf_Mold",
+    "cause": "Fungus Passalora fulva",
+    "cure": "Improve ventilation and use fungicide"
+  },
+  {
+    "name": "Tomato___Septoria_leaf_spot",
+    "cause": "Fungus Septoria lycopersici",
+    "cure": "Remove infected leaves and apply fungicide"
+  },
+  {
+    "name": "Tomato___Spider_mites Two-spotted_spider_mite",
+    "cause": "Spider mites",
+    "cure": "Use miticide or insecticidal soap"
+  },
+  {
+    "name": "Tomato___Tomato_Yellow_Leaf_Curl_Virus",
+    "cause": "Virus spread by whiteflies",
+    "cure": "Control whiteflies and remove infected plants"
+  },
+  {
+    "name": "Tomato___healthy",
+    "cause": "No disease",
+    "cure": "Maintain proper care"
+  }
+]

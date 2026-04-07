@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaf AI</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="min-h-screen">
+    <!-- HERO SECTION -->
+    <div class="hero min-h-screen relative">
+      <div class="hero-overlay bg-black/60"></div>
+      <div
+        class="absolute inset-0 bg-cover bg-center blur-sm scale-105"
+        style="
+          background-image: url(&quot;/static/images/tropical-green-leaves-backgroun1d.jpg&quot;);
+        "
+      ></div>
+
+      <!-- CONTENT -->
+      <div class="hero-content text-center text-white relative z-10">
+        <div class="max-w-5xl">
+          <!-- TITLE -->
+          <h1 class="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 drop-shadow-lg">
+            🌿 Leaf Disease Detection
+          </h1>
+
+          <p class="mb-6 text-[12px] md:text-sm lg:text-lg opacity-80">
+            Upload a leaf image and get instant AI-powered diagnosis
+          </p>
+
+          <!-- GLASS CARD -->
+          <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-6 shadow-2xl">
+            <!-- FORM -->
+            <form
+              action="/upload/"
+              method="POST"
+              enctype="multipart/form-data"
+              class="space-y-4"
+            >
+              <input
+                type="file"
+                name="img"
+                class="file-input file-input-bordered w-full bg-white/20 text-white"
+                required
+              />
+
+              <button class="btn btn-success w-full text-lg">
+                🚀 Analyze Image
+              </button>
+            </form>
+          </div>
+
+          <!-- RESULT -->
+          {% if result %}
+          <div class="mt-8 bg-base-100 text-black rounded-2xl p-6 shadow-xl">
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+              <!-- IMAGE -->
+              <img
+                src="{{imagepath}}"
+                class="rounded-xl w-full h-64 object-cover"
+              />
+
+              <!-- TEXT -->
+              <div class="text-left">
+                <h2 class="text-2xl font-bold text-green-600 mb-2">
+                  🌿 {{prediction['name']}}
+                </h2>
+
+                <div class="space-y-3">
+                  <div class="p-3 bg-green-50 rounded-lg">
+                    <p class="font-semibold">Cause</p>
+                    <p class="text-sm">{{prediction['cause']}}</p>
+                  </div>
+
+                  <div class="p-3 bg-blue-50 rounded-lg">
+                    <p class="font-semibold">Cure</p>
+                    <p class="text-sm">{{prediction['cure']}}</p>
+                  </div>
+                </div>
+
+                <a href="/" class="btn btn-outline btn-success mt-4 w-full">
+                  🔄 Try Another Image
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
